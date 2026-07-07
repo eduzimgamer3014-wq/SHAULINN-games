@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SHAULINN Games</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#0f0f0f;
+color:white;
+}
+
+header{
+background:linear-gradient(90deg,#00ffcc,#0066ff);
+padding:20px;
+text-align:center;
+}
+
+header h1{
+font-size:40px;
+}
+
+nav{
+background:#111;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+}
+
+nav button{
+background:none;
+border:none;
+color:white;
+padding:15px;
+cursor:pointer;
+font-size:16px;
+}
+
+nav button:hover{
+color:#00ffcc;
+}
+
+.page{
+display:none;
+padding:20px;
+}
+
+.active{
+display:block;
+}
+
+.card{
+background:#1b1b1b;
+padding:20px;
+margin:15px 0;
+border-radius:15px;
+box-shadow:0 0 15px rgba(0,255,255,.3);
+}
+
+h2{
+color:#00ffcc;
+margin-bottom:10px;
+}
+
+input{
+width:100%;
+padding:10px;
+border-radius:10px;
+border:none;
+margin:10px 0;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#111;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🎮 SHAULINN Games</h1>
+<p>Portal de Roblox e Brawl Stars</p>
+</header>
+
+<nav>
+<button onclick="showPage('inicio')">🏠 Início</button>
+<button onclick="showPage('roblox')">🎮 Roblox</button>
+<button onclick="showPage('brawl')">⭐ Brawl Stars</button>
+<button onclick="showPage('noticias')">📰 Notícias</button>
+<button onclick="showPage('ranking')">🏆 Ranking</button>
+</nav>
+
+<div class="page active" id="inicio">
+<div class="card">
+<h2>Bem-vindo!</h2>
+<p>O melhor portal para fãs de Roblox e Brawl Stars.</p>
+</div>
+</div>
+
+<div class="page" id="roblox">
+<div class="card">
+<h2>🎮 Roblox</h2>
+<p>Explore os melhores jogos:</p>
+<ul>
+<li>Blox Fruits</li>
+<li>Brookhaven</li>
+<li>Doors</li>
+<li>Murder Mystery 2</li>
+<li>BedWars</li>
+</ul>
+</div>
+
+<div class="card">
+<h2>⚔️ Blox Fruits</h2>
+<p>Frutas, espadas, estilos de luta, raids e muito mais.</p>
+</div>
+</div>
+
+<div class="page" id="brawl">
+<div class="card">
+<h2>⭐ Atualizações do Brawl Stars</h2>
+
+<p>✨ Novos Brawlers: Nori e Wendy.</p>
+<p>🍜 Temporada NanoNoodles.</p>
+<p>🌪️ Temporada Ventópole.</p>
+<p>⚡ Novas Hipercargas.</p>
+<p>🎮 Novos modos de jogo.</p>
+<p>📈 Balanceamentos de Brawlers.</p>
+
+</div>
+</div>
+
+<div class="page" id="noticias">
+<div class="card">
+<h2>📰 Notícias</h2>
+<p>Fique ligado nas novidades de Roblox e Brawl Stars.</p>
+</div>
+</div>
+
+<div class="page" id="ranking">
+<div class="card">
+<h2>🏆 Ranking de Brawlers</h2>
+<ol>
+<li>Kenji</li>
+<li>Surge</li>
+<li>Leon</li>
+<li>Spike</li>
+<li>Crow</li>
+</ol>
+</div>
+</div>
+
+<footer>
+<p>© 2026 SHAULINN Games</p>
+</footer>
+
+<script>
+function showPage(id){
+let pages=document.querySelectorAll('.page');
+pages.forEach(page=>page.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+}
+</script>
+
+</body>
+</html>
